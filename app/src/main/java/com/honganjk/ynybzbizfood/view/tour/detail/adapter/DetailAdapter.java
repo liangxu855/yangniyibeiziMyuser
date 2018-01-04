@@ -125,17 +125,19 @@ public class DetailAdapter extends RecyclerView.Adapter {
                 itemView.findViewById(R.id.see_all).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                     changeUi();
+                     changeUi(view);
                     }
                 });
             }
         }
-        public void changeUi(){
+        public void changeUi(View view){
             if (!isShowMore){
+                ((TextView)view).setText(view.getResources().getString(R.string.shouqi));
                 for (int i = 3; i < starGrop.getChildCount(); i++) {
                     starGrop.getChildAt(i).setVisibility(View.VISIBLE);
                 }
             }else{
+                ((TextView)view).setText("查看全部亮点");
                 for (int i = 3; i < starGrop.getChildCount(); i++) {
                     starGrop.getChildAt(i).setVisibility(View.GONE);
                 }

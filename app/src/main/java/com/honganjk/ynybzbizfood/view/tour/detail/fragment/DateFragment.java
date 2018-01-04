@@ -57,12 +57,14 @@ public class DateFragment extends BaseFragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String selectDate = adapter.getDateByClickItem(i);
                 for(TourDetailBean.DataBean.Formats formats:mFormatsList){
-                    if (TextUtils.equals(formats.getTime(),adapter.getDateByClickItem(i))){
+                    if (TextUtils.equals(formats.getTime(),selectDate)){
                         Intent intent = new Intent();
                         intent.putExtra("Formats",formats);
                         getActivity().setResult(Activity.RESULT_OK,intent);
                         getActivity().finish();
+                        return;
                     }
                 }
             }

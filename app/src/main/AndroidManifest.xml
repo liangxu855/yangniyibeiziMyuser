@@ -509,21 +509,63 @@
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.MainTheme" />
-        <activity android:name=".view.tour.home.HomeTourActivity" />
+        <activity
+            android:name=".view.tour.home.HomeTourActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".view.tour.me.MeTourActivity" />
-        <activity android:name=".view.tour.classify.activity.TourClassifyDetailActivity" />
-        <activity android:name=".view.tour.detail.activity.DetailActivity" />
-        <activity android:name=".view.tour.detail.activity.SelectDataActivity" />
-        <activity android:name=".view.tour.order.activity.TourOrderDetailActiviry" />
-        <activity android:name=".view.tour.me.activity.CommonPassengerActivity" />
-        <activity android:name=".view.tour.me.activity.EditPassengerActivity" />
-        <activity android:name=".view.tour.home.activity.TourHomeSearchActivity"/>
-        <activity android:name=".view.tour.home.activity.TourSearchResultActivity"/>
-        <activity android:name=".view.tour.me.activity.MyKeepsActivity"/>
-        <activity android:name=".view.tour.detail.activity.OnLinePayActivity"/>
-        <activity android:name=".view.tour.order.activity.MyOrderDetailActivity"/>
-        <activity android:name=".view.tour.order.activity.EditEvaluationActivity"/>
+        <activity
+            android:name=".view.tour.me.MeTourActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.classify.activity.TourClassifyDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.detail.activity.DetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.detail.activity.SelectDataActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.order.activity.TourOrderDetailActiviry"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.me.activity.CommonPassengerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.me.activity.EditPassengerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.home.activity.TourHomeSearchActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.home.activity.TourSearchResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.me.activity.MyKeepsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.detail.activity.OnLinePayActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.order.activity.MyOrderDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tour.order.activity.EditEvaluationActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
         <!--**********************************公共********************************************* -->
 
 

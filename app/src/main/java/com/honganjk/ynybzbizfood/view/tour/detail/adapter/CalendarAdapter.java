@@ -2,7 +2,6 @@ package com.honganjk.ynybzbizfood.view.tour.detail.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,8 +93,8 @@ public class CalendarAdapter extends BaseAdapter {
                 myViewHolder.mIdTvItemSelectTimeDay.setTextColor(Color.GRAY);// 当月字体设黑
                 myViewHolder.mTvPrice.setText("");
                 for (TourDetailBean.DataBean.Formats formats : mFormatsList) {
-                    if (TextUtils.equals(formats.getTime().split("-")[1], String.valueOf(currentMonth))) {
-                        if (TextUtils.equals(formats.getTime().split("-")[2], String.valueOf(dayNumber[position]))) {
+                    if (Integer.parseInt(formats.getTime().split("-")[1]) == currentMonth) {
+                        if (Integer.parseInt(formats.getTime().split("-")[2]) == Integer.parseInt(dayNumber[position])) {
                             myViewHolder.mIdTvItemSelectTimeDay.setTextColor(Color.BLACK);// 当月并且是有项目字体设黑
                             myViewHolder.mTvPrice.setText("￥" + formats.getPrice() + "起");
                             myViewHolder.mIdTvItemSelectTimeDay.setTag(true);
@@ -192,11 +191,20 @@ public class CalendarAdapter extends BaseAdapter {
      */
     public String getDateByClickItem(int position) {
         StringBuffer sb = new StringBuffer();
-        sb.append(currentYear);
+        sb.append(currentYear)
+                .append("-");
+        if (currentMonth < 10) {
+            sb.append("0").append(currentMonth);
+        } else {
+            sb.append(currentMonth);
+        }
         sb.append("-");
-        sb.append(currentMonth);
-        sb.append("-");
-        sb.append(dayNumber[position]);
+        if (Integer.parseInt(dayNumber[position]) < 10) {
+            sb.append("0").append(dayNumber[position]);
+        } else {
+            sb.append(dayNumber[position]);
+        }
+
         return sb.toString();
     }
 

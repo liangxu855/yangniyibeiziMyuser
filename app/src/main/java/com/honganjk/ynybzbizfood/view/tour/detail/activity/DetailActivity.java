@@ -184,7 +184,7 @@ public class DetailActivity extends BaseMvpActivity<TourDetailInterface, TourDet
             @Override
             public void convert(final ViewHolder holder, final TourDetailBean.DataBean.Formats formats) {
 
-                holder.setText(R.id.tv_day,formats.getTime().replace("2017-","")+" 周"+DateUtils.weekTwo(formats.getTime()));
+                holder.setText(R.id.tv_day,formats.getTime().replace("2017-","").replace("2018-","")+" 周"+DateUtils.weekTwo(formats.getTime()));
 //                holder.setText(R.id.tv_day,formats.getTime());
                 holder.setText(R.id.tv_price, "￥" + formats.getPrice());
                 holder.getView(R.id.relativeLayout).setBackground(getResources().getDrawable(R.drawable.bg_shape_corner));
